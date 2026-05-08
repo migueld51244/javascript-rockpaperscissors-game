@@ -9,7 +9,20 @@
   <h1>Rock Paper Scissors Game</h1>
 
   <script>
-    console.log("Welcome to the Rock Paper Scissors Game!");
+    // This function will randomly return either "rock", "paper", or "scissors", to represent the computer's choice in the game.
+    function getComputerChoice (str) {
+      let num = Math.random();
+        if (num <= 0.33) {
+          return "rock"
+        }
+        else if (num <= 0.66 && num > 0.33) {
+          return "paper"
+        }
+        else {
+          return "scissors"
+        }
+    }
+    console.log(getComputerChoice());
   </script>
 </body>
 </html>
