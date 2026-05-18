@@ -10,7 +10,7 @@
 
   <script>
     // This function will randomly return either "rock", "paper", or "scissors", to represent the computer's choice in the game.
-    function getComputerChoice (str) {
+    function getComputerChoice () {
       let num = Math.random();
         if (num <= 0.33) {
           return "rock"
@@ -37,7 +37,7 @@
 
     // Function to play a single round
     function playRound (humanChoice, computerChoice) {
-      if (getComputerChoice === getHumanChoice) {
+      if (computerChoice === humanChoice) {
         console.log("Draw");
       } else if {
         
