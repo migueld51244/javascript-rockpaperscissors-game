@@ -40,15 +40,13 @@
       if (computerChoice === humanChoice) {
         console.log("Draw");
       } else if (humanChoice === 'rock' && computerChoice === 'paper' || humanChoice === 'paper' && computerChoice === 'scissors' || humanChoice === 'scissors' && computerChoice === 'rock') {
-        console.log("You lose")
+        console.log(`You lose, ${computerChoice} beats ${humanChoice}`);
+        computerScore++;
       } else {
-        console.log("Win!");
+        console.log(`You win, ${humanChoice} beats ${computerChoice}`);
+        humanScore++;
       }
     }
-    
-
-
-
 
   </script>
 </body>
