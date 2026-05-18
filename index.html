@@ -25,7 +25,7 @@
     console.log(getComputerChoice());
 
     // This function should prompt the user to input either "rock", "paper", or "scissors". It should return the user's choice.
-    function getHumanChoice (str) {
+    function getHumanChoice () {
       return prompt("Please enter rock, paper, or scissors");
     }
     console.log(getHumanChoice());
@@ -39,8 +39,10 @@
     function playRound (humanChoice, computerChoice) {
       if (computerChoice === humanChoice) {
         console.log("Draw");
-      } else if {
-        
+      } else if (humanChoice === 'rock' && computerChoice === 'paper' || humanChoice === 'paper' && computerChoice === 'scissors' || humanChoice === 'scissors' && computerChoice === 'rock') {
+        console.log("You lose")
+      } else {
+        console.log("Win!");
       }
     }
     
