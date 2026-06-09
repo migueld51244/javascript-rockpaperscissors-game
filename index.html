@@ -31,15 +31,17 @@
       function getComputerChoice () {
       let num = Math.random();
         if (num <= 0.33) {
-          return "rock"
+          return "rock";
         }
         else if (num <= 0.66 && num > 0.33) {
-          return "paper"
+          return "paper";
         }
         else {
-          return "scissors"
-        }
-      }
+          return "scissors";
+        };
+      };
+
+      let computerMove = getComputerChoice();
 
       // Compares the human move to the CPU's move
       if (move === getComputerChoice()) {
@@ -50,8 +52,9 @@
       } else {
         console.log(`You win`);
         humanScore++;
-      }
-    }
+      };
+
+    };
   </script>
 </body>
 </html>
