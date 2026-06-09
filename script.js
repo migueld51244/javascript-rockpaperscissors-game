@@ -41,5 +41,15 @@ function playGame(move) {
   }
 
   displayScore();
+
+  if (humanScore === 5) {
+    document.querySelector('.results-area').innerHTML = "<p>You won!</p>"
+    humanScore = 0;
+    computerScore = 0;
+  } else if (computerScore === 5) {
+    document.querySelector('.results-area').innerHTML = "<p>You lose!</p>"
+    humanScore = 0;
+    computerScore = 0;
+  }
 }
 
