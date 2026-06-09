@@ -32,4 +32,8 @@ function playGame(move) {
     console.log(`You win`);
     humanScore++;
   }
+
+  function displayScore() {
+    
+  }
 }
