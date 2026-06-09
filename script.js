@@ -2,6 +2,17 @@
 let humanScore = 0;
 let computerScore = 0;
 
+function eventListener() {
+  document.getElementById('rock')
+    .addEventListener("click", () => playGame('rock'));
+  document.getElementById('paper')
+    .addEventListener("click", () => playGame('paper'));
+  document.getElementById('scissors')
+    .addEventListener("click", () => playGame('scissors'));
+}
+
+eventListener();
+
 // Function to display real-time score
 function displayScore() {
   document.querySelector(".results-area").innerHTML = `<p>You: ${humanScore} - CPU: ${computerScore}</p>`;
