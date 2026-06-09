@@ -38,23 +38,23 @@
         }
         else {
           return "scissors";
-        };
-      };
+        }
+      }
 
       let computerMove = getComputerChoice();
 
       // Compares the human move to the CPU's move
-      if (move === getComputerChoice()) {
+      if (move === computerMove) {
         console.log("Draw");
-      } else if (move === 'rock' && getComputerChoice() === 'paper' || move === 'paper' && getComputerChoice() === 'scissors' || move === 'scissors' && getComputerChoice() === 'rock') {
+      } else if (move === 'rock' && computerMove === 'paper' || move === 'paper' && computerMove === 'scissors' || move === 'scissors' && computerMove === 'rock') {
         console.log(`You lose`);
         computerScore++;
       } else {
         console.log(`You win`);
         humanScore++;
-      };
+      }
 
-    };
+    }
   </script>
 </body>
 </html>
