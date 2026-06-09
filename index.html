@@ -41,6 +41,7 @@
         }
       }
 
+      // Compares the human move to the CPU's move
       if (move === getComputerChoice()) {
         console.log("Draw");
       } else if (move === 'rock' && getComputerChoice() === 'paper' || move === 'paper' && getComputerChoice() === 'scissors' || move === 'scissors' && getComputerChoice() === 'rock') {
