@@ -8,9 +8,15 @@
 <body>
   <h1>Rock Paper Scissors Game</h1>
 
-  <button>Rock</button>
-  <button>Paper</button>
-  <button>Scissors</button>
+  <button onclick="
+    playRound(getHumanChoice('rock'), getComputerChoice);
+  ">Rock</button>
+  <button onclick="
+    playRound(getHumanChoice('paper'), getComputerChoice);
+  ">Paper</button>
+  <button onclick="
+    playRound(getHumanChoice('scissors'), getComputerChoice);
+  ">Scissors</button>
 
   // 
   <div></div>
@@ -29,10 +35,10 @@
           return "scissors"
         }
     }
-
+    
     // This function should prompt the user to input either "rock", "paper", or "scissors". It should return the user's choice.
-    function getHumanChoice () {
-      return prompt("Please enter rock, paper, or scissors").toLowerCase();
+    function getHumanChoice (move) {
+      return move;
     }
 
 
@@ -46,10 +52,10 @@
       if (computerChoice === humanChoice) {
         console.log("Draw");
       } else if (humanChoice === 'rock' && computerChoice === 'paper' || humanChoice === 'paper' && computerChoice === 'scissors' || humanChoice === 'scissors' && computerChoice === 'rock') {
-        console.log(`You lose, ${computerChoice} beats ${humanChoice}`);
+        console.log(`You lose`);
         computerScore++;
       } else {
-        console.log(`You win, ${humanChoice} beats ${computerChoice}`);
+        console.log(`You win`);
         humanScore++;
       }
     }
