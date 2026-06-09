@@ -22,7 +22,12 @@
   <div></div>
 
   <script>
+    // Score keeping variables
+    let humanScore = 0;
+    let computerScore = 0;
+
     function playGame(move) {
+      // This functions determines the CPU's move
       function getComputerChoice () {
       let num = Math.random();
         if (num <= 0.33) {
@@ -36,27 +41,15 @@
         }
       }
 
-          // This function should prompt the user to input either "rock", "paper", or "scissors". It should return the user's choice.
-    function getHumanChoice (move) {
-      return move;
-    }
-
-        // Score keeping variables
-    let humanScore = 0;
-    let computerScore = 0;
-
-    // Function to play a single round
-    function playRound (humanChoice, computerChoice) {
-      if (computerChoice === humanChoice) {
+      if (move === getComputerChoice()) {
         console.log("Draw");
-      } else if (humanChoice === 'rock' && computerChoice === 'paper' || humanChoice === 'paper' && computerChoice === 'scissors' || humanChoice === 'scissors' && computerChoice === 'rock') {
+      } else if (move === 'rock' && getComputerChoice() === 'paper' || move === 'paper' && getComputerChoice() === 'scissors' || move === 'scissors' && getComputerChoice() === 'rock') {
         console.log(`You lose`);
         computerScore++;
       } else {
         console.log(`You win`);
         humanScore++;
       }
-    }
     }
   </script>
 </body>
