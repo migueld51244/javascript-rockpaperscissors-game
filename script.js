@@ -54,13 +54,15 @@ function playGame(move) {
   displayScore();
 
   if (humanScore === 5) {
-    document.querySelector('.results-area').innerHTML = "<p>You won!</p>"
+    document.querySelector('.game-message').innerHTML = "<p>You won!</p>"
     humanScore = 0;
     computerScore = 0;
+    displayScore();
   } else if (computerScore === 5) {
-    document.querySelector('.results-area').innerHTML = "<p>You lose!</p>"
+    document.querySelector('.game-message').innerHTML = "<p>You lose!</p>"
     humanScore = 0;
     computerScore = 0;
+    displayScore();
   }
 }
 
