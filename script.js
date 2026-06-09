@@ -2,6 +2,13 @@
 let humanScore = 0;
 let computerScore = 0;
 
+// Function to display real-time score
+function displayScore() {
+  document.querySelector(".results-area").innerHTML = `<p>You: ${humanScore} - CPU: ${computerScore}</p>`;
+}
+
+displayScore();
+
 function playGame(move) {
   
   // This functions determines the CPU's move
@@ -33,9 +40,6 @@ function playGame(move) {
     humanScore++;
   }
 
-  function displayScore() {
-    document.querySelector(".results-area").innerHTML = `<p>You: ${humanScore} - CPU: ${computerScore}</p>`;
-  }
-
   displayScore();
 }
+
