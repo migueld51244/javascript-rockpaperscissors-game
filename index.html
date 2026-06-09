@@ -46,7 +46,7 @@
       // Compares the human move to the CPU's move
       if (move === computerMove) {
         console.log("Draw");
-      } else if (move === 'rock' && computerMove === 'paper' || move === 'paper' && computerMove === 'scissors' || move === 'scissors' && computerMove === 'rock') {
+      } else if ((move === 'rock' && computerMove === 'paper') || (move === 'paper' && computerMove === 'scissors') || (move === 'scissors' && computerMove === 'rock')) {
         console.log(`You lose`);
         computerScore++;
       } else {
