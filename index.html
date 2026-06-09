@@ -27,9 +27,11 @@
     let computerScore = 0;
 
     function playGame(move) {
+      
       // This functions determines the CPU's move
       function getComputerChoice () {
-      let num = Math.random();
+        let num = Math.random();
+        
         if (num <= 0.33) {
           return "rock";
         }
@@ -41,6 +43,7 @@
         }
       }
 
+      // Variable to store CPU's move
       let computerMove = getComputerChoice();
 
       // Compares the human move to the CPU's move
@@ -53,7 +56,6 @@
         console.log(`You win`);
         humanScore++;
       }
-
     }
   </script>
 </body>
