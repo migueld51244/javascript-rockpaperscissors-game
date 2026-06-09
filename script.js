@@ -34,6 +34,8 @@ function playGame(move) {
   }
 
   function displayScore() {
-    
+    document.querySelector(".results-area").innerHTML = `<p>You: ${humanScore} - CPU: ${computerScore}</p>`;
   }
+
+  displayScore();
 }
